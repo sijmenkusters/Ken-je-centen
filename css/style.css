@@ -1,0 +1,723 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+}
+
+body{
+	font-family: Golos Text;
+	background-color: #ecece7;
+}
+
+h1{
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+h2{
+	font-size: 60px;
+	font-weight: 700;
+}
+
+h3{
+	font-size: 30px;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+	outline: 2px solid black;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.logo{
+	height: 60px;
+	width: 150px;
+	display: flex;
+	align-items: center;
+}
+
+.headerbuttons {
+    display: flex;
+    gap: 50px;
+}
+
+.headerbutton{
+	height: 60px;
+	width: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 300ms;
+}
+
+.headerbutton:hover{
+	background-color: #cccccc;
+	outline: 2px solid black;
+	box-shadow: 3px 3px 0 black;
+}
+
+.buttontoquiz{
+	display: block;
+	margin: 60px auto 75px auto;
+	width: 950px;
+	height: auto;
+	background-color: rgb(112, 196, 255);
+	padding: 25px;
+	border-radius: 10px;
+	transition: 300ms;
+}
+
+.buttontoquiz:hover{
+	background-color: rgb(33, 163, 255);
+	outline: solid black 2px;
+	box-shadow: 8px 8px 0 black;
+}
+
+
+
+.tekstblok{
+	width: 950px;
+	padding: 25px;
+	height: auto;
+	border: black solid 2px;
+	border-radius: 25px;
+	margin: 25px auto 150px auto;
+    box-shadow: 8px 8px 0 #171717;
+    background-color: #f9f9f6;
+}
+
+.fotogif{
+	margin: 0 auto;
+    width: 1000px;
+    height: 200px;
+    overflow: hidden;
+	border-radius: 15px;
+}
+
+.fotogif img{
+    display: block;
+    width: 1000px;
+    height: 200px;
+    object-fit: fill;
+}
+
+
+.footer{
+	background-color: black;
+	height: 150px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 100px;
+}
+
+.footertext{
+	color: #f9f9f6;
+	height: 40px;
+	width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 300ms;
+	border-radius: 10px;
+}
+
+.footertext:hover{
+	background-color: #444444;
+	outline: 1px solid #f9f9f6;
+	box-shadow: 3px 3px 0 #f9f9f6;
+}
+
+.contact {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f6;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0 #171717;
+	outline: 2px solid black;
+}
+
+.contact h2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact label {
+    font-weight: bold;
+    color: #333;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+	font-family: Golos Text;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    outline: 1px solid #333;
+    border-color: #333;
+}
+
+.contact textarea {
+    resize: vertical;
+}
+
+.contact button {
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #555;
+}
+
+
+[hidden] {
+    display: none !important;
+}
+
+.spel {
+    width: min(100% - 32px, 1000px);
+    margin: 55px auto 100px;
+    color: #171717;
+    line-height: 1.5;
+}
+
+.spel-start,
+.spel-scherm,
+.eindscherm {
+    background: #ffffff;
+    border: 2px solid #171717;
+    border-radius: 24px;
+    padding: clamp(22px, 5vw, 48px);
+    box-shadow: 8px 8px 0 #171717;
+}
+
+.spel-start {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.spel-label,
+.stap-label {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.spel-start h2,
+.eindscherm h2 {
+    font-size: clamp(34px, 6vw, 56px);
+    line-height: 1.08;
+    margin-bottom: 20px;
+}
+
+.spel-start > p:not(.spel-label),
+#eindintro {
+    font-size: 17px;
+    margin-bottom: 24px;
+}
+
+.start-budget {
+    background: #e3f4e8;
+    border: 2px solid #171717;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 26px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.start-budget strong {
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.spel-uitleg {
+    text-align: left;
+    list-style: none;
+    margin: 24px 0 30px;
+}
+
+.spel-uitleg li {
+    padding: 10px 0 10px 32px;
+    position: relative;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.spel-uitleg li::before {
+    content: "✓";
+    position: absolute;
+    left: 4px;
+    font-weight: 800;
+}
+
+.spel-knop,
+.koopknop,
+.overslaanknop,
+.prijsoptie {
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    border: 2px solid #171717;
+    border-radius: 12px;
+    padding: 14px 20px;
+    transition: transform 150ms, background-color 150ms;
+}
+
+.spel-knop {
+    background: #70c4ff;
+    color: #171717;
+	transition: 300ms;
+}
+
+.spel-knop:hover,
+.koopknop:hover,
+.overslaanknop:hover,
+.prijsoptie:hover {
+   	background-color: rgb(33, 163, 255);
+	outline: solid black 1px;
+	box-shadow: 4px 4px 0 black;
+}
+
+.spel-knop:focus-visible,
+.koopknop:focus-visible,
+.overslaanknop:focus-visible,
+.prijsoptie:focus-visible {
+    outline: 3px solid #2869c7;
+    outline-offset: 3px;
+}
+
+.spel-scherm {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.spel-bovenbalk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.budget-label strong {
+    font-size: 18px;
+}
+
+.voortgang-balk {
+    height: 12px;
+    background: #e8e8e8;
+    border: 1px solid #171717;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 18px 0 28px;
+}
+
+#voortgangvulling {
+    width: 0;
+    height: 100%;
+    background: #70c4ff;
+    transition: width 250ms ease;
+}
+
+.productkaart {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    border: 2px solid #171717;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 28px;
+}
+
+.productfoto {
+    position: relative;
+    min-height: 280px;
+    background: #f2f2ee;
+}
+
+.productfoto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    object-fit: cover;
+}
+
+.kortingsbadge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    padding: 8px 12px;
+    background: #ffdf66;
+    border: 2px solid #171717;
+    border-radius: 9px;
+    font-weight: 800;
+}
+
+.productinfo {
+    padding: clamp(20px, 4vw, 32px);
+    align-self: center;
+}
+
+.productcategorie {
+    color: #555;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.productinfo h2 {
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.prijzen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.oude-prijs {
+    color: #666;
+    text-decoration: line-through;
+    font-size: 18px;
+}
+
+.aanbiedingsprijs {
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.kortingstekst {
+    font-size: 14px;
+    color: #444;
+}
+
+.prijsvraag,
+.koopkeuze,
+.eindproducten,
+.eindreflectie {
+    margin-top: 28px;
+}
+
+.stap-label {
+    color: #444;
+}
+
+.prijsvraag h3,
+.koopkeuze h3,
+.eindproducten h3,
+.eindreflectie h3 {
+    font-size: clamp(23px, 4vw, 30px);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.vraag-uitleg,
+#koopuitleg {
+    margin-bottom: 20px;
+}
+
+.prijsopties {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.prijsoptie {
+    background: #f9f9f6;
+    min-height: 60px;
+    font-size: 18px;
+}
+
+.prijsoptie:disabled {
+    cursor: default;
+    transform: none;
+    opacity: 0.85;
+}
+
+.prijsoptie.antwoord-goed {
+    background: #c9f1d4;
+    border-color: #237541;
+}
+
+.prijsoptie.antwoord-fout {
+    background: #ffd8d8;
+    border-color: #b3261e;
+}
+
+.antwoordfeedback,
+.keuzefeedback {
+    padding: 15px;
+    margin-top: 18px;
+    border-radius: 12px;
+    background: #f1f1ed;
+    border: 1px solid #d2d2cd;
+}
+
+.feedback-goed {
+    background: #e3f4e8 !important;
+    border-color: #237541 !important;
+}
+
+.timerstatus {
+    font-weight: 800;
+    margin: 0 0 14px;
+}
+
+.timer-bijna-om {
+    color: #b3261e;
+}
+
+.keuzeknoppen {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.koopknop {
+    background: #bcebc9;
+    flex: 1;
+}
+
+.overslaanknop {
+    background: #f1f1ed;
+    flex: 1;
+}
+
+.koopknop:disabled,
+.overslaanknop:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+    transform: none;
+}
+
+.volgende-product {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.resultaatcijfers {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 28px 0;
+}
+
+.resultaatcijfer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px;
+    border: 2px solid #171717;
+    border-radius: 14px;
+    background: #f9f9f6;
+}
+
+.resultaatcijfer span {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.resultaatcijfer strong {
+    font-size: clamp(18px, 3vw, 26px);
+    overflow-wrap: anywhere;
+}
+
+.resultaatcijfer.over {
+    background: #e3f4e8;
+}
+
+#gekochteproducten {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.gekocht-product {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px;
+    border: 1px solid #d8d8d3;
+    border-radius: 12px;
+}
+
+.gekocht-product img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.gekocht-product strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#leerpunt p {
+    padding: 16px;
+    margin-bottom: 10px;
+    background: #f9f9f6;
+    border-left: 4px solid #70c4ff;
+    border-radius: 0 10px 10px 0;
+}
+
+#opnieuwknop {
+    margin-top: 30px;
+}
+
+@media (max-width: 650px) {
+    .spel {
+        margin-top: 28px;
+        margin-bottom: 60px;
+    }
+
+    .spel-start,
+    .spel-scherm,
+    .eindscherm {
+        box-shadow: 4px 4px 0 #171717;
+        border-radius: 17px;
+    }
+
+    .productkaart {
+        grid-template-columns: 1fr;
+    }
+
+    .productfoto,
+    .productfoto img {
+        min-height: 230px;
+        max-height: 300px;
+    }
+
+    .productinfo h2 {
+        font-size: 32px;
+    }
+
+    .resultaatcijfers {
+        grid-template-columns: 1fr;
+    }
+
+    .resultaatcijfer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #gekochteproducten {
+        grid-template-columns: 1fr;
+    }
+
+    .spel-bovenbalk {
+        align-items: flex-start;
+    }
+
+    .keuzeknoppen {
+        flex-direction: column;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

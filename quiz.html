@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap" rel="stylesheet">
+
+    <title>Ken je centen | Quiz</title>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="headerbuttons">
+            <a href="jongeren.html" class="headerbutton"><h1>Jongeren</h1></a>
+            <a href="ouders.html" class="headerbutton"><h1>Ouders</h1></a>
+        </div>
+
+        <a href="index.html" class="logo">
+            <img src="assets/kenjecentenlogo.svg" alt="Ken je centen">
+        </a>
+
+        <div class="headerbuttons">
+            <a href="quiz.html" class="headerbutton"><h1>Test je kennis</h1></a>
+            <a href="overons.html" class="headerbutton"><h1>Over ons</h1></a>
+        </div>
+    </header>
+
+    <main class="spel">
+
+        <section class="spel-start" id="startscherm">
+            <p class="spel-label">KEN JE CENTEN</p>
+            <h2>Wat kostte dit echt?</h2>
+
+            <p>
+                Kortingen lijken aantrekkelijk. Maar koop je iets omdat
+                je het nodig hebt, of omdat de aanbieding je verleidt?
+            </p>
+
+            <div class="start-budget">
+                <span>Jouw startbudget</span>
+                <strong>€ 200,00</strong>
+            </div>
+
+            <ul class="spel-uitleg">
+                <li>Bekijk 5 producten met korting.</li>
+                <li>Raad de oorspronkelijke prijs.</li>
+                <li>Kies daarna: kopen of overslaan.</li>
+                <li>Ontdek hoeveel geld je overhoudt.</li>
+            </ul>
+
+            <button class="spel-knop" id="startknop">
+                Start de uitdaging
+            </button>
+        </section>
+
+        <section class="spel-scherm" id="quizscherm" hidden>
+            <div class="spel-bovenbalk">
+                <span id="voortgang">PRODUCT 1 VAN 5</span>
+                <span class="budget-label">
+                    Budget: <strong id="budget">€ 200,00</strong>
+                </span>
+            </div>
+
+            <div class="voortgang-balk">
+                <div id="voortgangvulling"></div>
+            </div>
+
+            <article class="productkaart">
+                <div class="productfoto">
+                    <img id="productafbeelding" src="" alt="">
+                    <span class="kortingsbadge" id="kortingsbadge">-40%</span>
+                </div>
+
+                <div class="productinfo">
+                    <p class="productcategorie" id="productcategorie"></p>
+                    <h2 id="productnaam"></h2>
+
+                    <div class="prijzen">
+                        <span class="oude-prijs" id="oudeprijs"></span>
+                        <strong class="aanbiedingsprijs" id="aanbiedingsprijs"></strong>
+                    </div>
+
+                    <p class="kortingstekst" id="kortingstekst"></p>
+                </div>
+            </article>
+
+            <section class="prijsvraag" id="prijsvraag">
+                <p class="stap-label">STAP 1 · DENK NA</p>
+                <h3>Wat kostte dit product vóór de korting?</h3>
+                <p class="vraag-uitleg">
+                    Kijk niet alleen naar wat je bespaart.
+                    Probeer de oorspronkelijke prijs te achterhalen.
+                </p>
+
+                <div class="prijsopties" id="prijsopties"></div>
+
+                <p class="antwoordfeedback" id="antwoordfeedback"
+                   aria-live="polite" hidden></p>
+            </section>
+
+            <section class="koopkeuze" id="koopkeuze" hidden>
+                <p class="stap-label">STAP 2 · JOUW KEUZE</p>
+                <h3>Wil je dit product kopen?</h3>
+
+                <p id="koopuitleg"></p>
+
+                <div class="keuzeknoppen">
+                    <button class="koopknop" id="koopknop">
+                        Ik koop dit
+                    </button>
+                    <button class="overslaanknop" id="overslaanknop">
+                        Ik sla over
+                    </button>
+                </div>
+
+                <p class="keuzefeedback" id="keuzefeedback"
+                   aria-live="polite" hidden></p>
+
+                <button class="spel-knop volgende-product"
+                        id="volgendeknop" hidden>
+                    Volgend product
+                </button>
+            </section>
+        </section>
+
+        <section class="eindscherm" id="resultaatscherm" hidden>
+            <p class="spel-label">JOUW RESULTAAT</p>
+            <h2 id="eindtitel">Jouw winkelmandje</h2>
+            <p id="eindintro"></p>
+
+            <div class="resultaatcijfers">
+                <div class="resultaatcijfer">
+                    <span>Startbudget</span>
+                    <strong id="eindstartbudget"></strong>
+                </div>
+
+                <div class="resultaatcijfer">
+                    <span>Uitgegeven</span>
+                    <strong id="einduitgegeven"></strong>
+                </div>
+
+                <div class="resultaatcijfer over">
+                    <span>Overgehouden</span>
+                    <strong id="eindover"></strong>
+                </div>
+            </div>
+
+            <section class="eindproducten">
+                <h3>Wat heb je gekocht?</h3>
+                <div id="gekochteproducten"></div>
+            </section>
+
+            <section class="eindreflectie">
+                <h3>Wat kun je hiervan leren?</h3>
+                <div id="leerpunt"></div>
+            </section>
+
+            <button class="spel-knop" id="opnieuwknop">
+                Speel opnieuw
+            </button>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="index.html" class="logo">
+            <img src="assets/kenjecentenlogowit.svg" alt="Ken je centen">
+        </a>
+
+        <a href="https://www.instagram.com/1c1c34/"
+           target="_blank" rel="noopener noreferrer">
+            <p class="footertext">Socials</p>
+        </a>
+
+        <a href="copyright.html">
+            <p class="footertext">Copyright</p>
+        </a>
+
+        <a href="contact.html">
+            <p class="footertext">Contact</p>
+        </a>
+    </footer>
+
+</body>
+</html>
