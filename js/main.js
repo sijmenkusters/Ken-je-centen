@@ -1,6 +1,15 @@
+function zoeken() {
+    let zoekterm = document.getElementById("zoekveld").value;
+
+    if (zoekterm.trim() !== "") {
+        window.location.href =
+            "https://www.google.com/search?q=" + encodeURIComponent(zoekterm);
+    }
+}
+
 const START_BUDGET = 200;
 const TOTAL_PRODUCTS = 5;
-const TIME_LIMIT = 10;
+const TIME_LIMIT = 15;
 
 const products = [
     {
@@ -138,7 +147,6 @@ function showProduct() {
     $("#keuzefeedback").hidden = true;
     $("#volgendeknop").hidden = true;
 
-    // Reset de feedbackstijl van het vorige product.
     $("#antwoordfeedback").classList.remove("feedback-goed");
 
     $("#koopknop").disabled = false;
@@ -152,7 +160,7 @@ function createPriceOptions(product) {
     const container = $("#prijsopties");
     container.replaceChildren();
 
-    // Vier unieke opties, waarvan precies één juist is.
+
     const wrongPrices = shuffle([
         product.originalPrice - 20,
         product.originalPrice - 10,
@@ -244,8 +252,7 @@ function chooseAnswer(price) {
         }
     });
 
-    // Pas na het beantwoorden de oorspronkelijke prijs
-    // en de kortingsinformatie zichtbaar maken.
+
     $("#oudeprijs").hidden = false;
     $("#kortingsbadge").hidden = false;
     $("#kortingstekst").hidden = false;

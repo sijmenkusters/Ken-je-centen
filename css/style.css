@@ -69,8 +69,12 @@ h2{
 
 h3{
 	font-size: 30px;
+    line-height: 1.2;
 }
 
+p{
+    line-height: 1.5;
+}
 
 .header {
     display: flex;
@@ -129,6 +133,70 @@ h3{
 }
 
 
+
+.zoekbalkblok {
+    height: 200px;
+    display: flex;
+    margin: 30px auto 0 auto;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.zoekbalk {
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.zoekbalk input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    outline: 1px solid black;
+    border-radius: 5px 0 0 5px;
+}
+
+.zoekbalk button {
+    padding: 12px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    outline: 1px solid #f9f9f6;
+}
+
+.zoekbalk button:hover {
+	background-color: #444444;
+	outline: 1px solid #f9f9f6;
+	box-shadow: 3px 3px 0 #f9f9f6;
+}
+
+
+.geldachtergrond {
+	margin: 0 auto;
+    width: 1000px;
+    height: 200px;
+    overflow: hidden;
+	border-radius: 15px;
+    background: url("../assets/geldgeldgeld.jpg") center / cover no-repeat;
+    background-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 100px 0 100px;
+}
+
+.geldachtergrond img{
+    display: block;
+    width: 1000px;
+    height: 200px;
+    object-fit: fill;
+}
+
+.geldachtergrond h3{
+    color: white;
+}
 
 .tekstblok{
 	width: 950px;
